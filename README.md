@@ -98,6 +98,68 @@ While the application is designed to be run from the command line, you can also 
 2. **Open Project**: Go to File \> Open Folder... and select the project's root directory.  
 3. **Add JDBC Driver**: In the "JAVA PROJECTS" explorer view, find "Referenced Libraries," click the \+ icon, and add the lib/ojdbc17.jar file.
 
+## **Project Structure**
+
+CCRMS/
+├── bin/
+├── src/
+│   ├── edu/ccrms/cli/
+│   │   └── Main.java
+│   ├── edu/ccrms/config/
+│   │   └── AppConfig.java
+│   ├── edu/ccrms/domain/
+│   │   ├── Course.java
+│   │   ├── CourseCode.java
+│   │   ├── Enrollment.java
+│   │   ├── Grade.java
+│   │   ├── Instructor.java
+│   │   ├── Name.java
+│   │   ├── Person.java
+│   │   ├── Semester.java
+│   │   └── Student.java
+│   ├── edu/ccrms/exception/
+│   │   ├── DataIntegrityException.java
+│   │   ├── DuplicateEnrollmentException.java
+│   │   ├── MaxCreditLimitExceededException.java
+│   │   └── RecordNotFoundException.java
+│   ├── edu/ccrms/io/
+│   │   ├── BackupService.java
+│   │   ├── DatabaseInitializer.java
+│   │   ├── DatabaseManager.java
+│   │   └── ImportExportService.java
+│   ├── edu/ccrms/service/
+│   │   ├── CourseService.java
+│   │   ├── DatabaseAdminService.java
+│   │   ├── EnrollmentService.java
+│   │   ├── InstructorService.java
+│   │   ├── StudentService.java
+│   │   └── TranscriptService.java
+│   └── edu/ccrms/util/
+│       ├── RecursiveUtil.java
+│       ├── Searchable.java
+│       └── Validator.java
+├── app-data/
+│   ├── courses.csv
+│   ├── enrollments.csv
+│   ├── instructors.csv
+│   └── students.csv
+├── import-data/
+│   ├── courses.csv
+│   ├── enrollments.csv
+│   ├── instructors.csv
+│   └── students.csv
+├── lib/
+│   └── ojdbc17.jar
+├── test-data/
+│   ├── courses.csv
+│   ├── enrollments.csv
+│   ├── instructors.csv
+│   └── students.csv
+├── database_setup.sql
+├── module-info.java
+├── README.md
+└── USAGE.md
+
 ## **Mapping of Syllabus Topics to Project Files**
 
 | Syllabus Topic | File/Class/Method Where Demonstrated |
